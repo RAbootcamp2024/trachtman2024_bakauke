@@ -1,5 +1,9 @@
 # git ignoreにdtaフォルダを追加・記載してデータをネットに上げないようにする
 
+# environmentをきれいにする
+rm(list=ls())
+
+
 #パッケージのインストール----
 # install.packages("tidyverse")
 # install.packages("haven")
@@ -113,5 +117,5 @@ data <- data %>%
 
 #データの保存----
 save(data,file="cleaning/data.RData")
-
+rm(list=ls())
 
