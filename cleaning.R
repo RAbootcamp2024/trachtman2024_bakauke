@@ -1,9 +1,9 @@
 # git ignoreにdtaフォルダを追加・記載してデータをネットに上げないようにする
 
-#パッケージのインストール
+#パッケージのインストール----
 # install.packages("tidyverse")
 # install.packages("haven")
-library("haven");library("tidyverse");library(tidyverse)
+library("haven");library("tidyverse")
 
 
 #survey データ読み込み（時間に余裕があれば繰り返し！）----
