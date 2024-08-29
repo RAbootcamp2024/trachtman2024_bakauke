@@ -1,8 +1,10 @@
 # git ignoreにdtaフォルダを追加・記載してデータをネットに上げないようにする
 
-#
+#パッケージのインストール
+# install.packages("tidyverse")
 # install.packages("haven")
-library("haven")
+library("haven");library("tidyverse");library(tidyverse)
+
 
 #survey データ読み込み（時間に余裕があれば繰り返し！）----
 survey1_clean <- read_dta("dta/survey1_clean.dta")
@@ -16,9 +18,7 @@ appdata_y <- read_dta("dta/appdata_y_clean.dta")
 #sample----
 sample_random <- read_dta("dta/sample_randomized_nopii.dta")
 
-#パッケージのインストール
-# install.packages("tidyverse")
-library("tidyverse")
+
 
 #appdataの結合----
 appdata <- left_join(appdata_x,appdata_y,
@@ -54,12 +54,9 @@ data <- data %>%
 summary(dt$havedata_x)
 summary(dt$havedata_y)
 
-# install.packages("skimr")
-# library(skimr)
 
-skim(dt)
 
-library(tidyverse)
+
 df <- data %>% 
   select(ends_with(".x"))
 df
